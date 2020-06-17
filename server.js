@@ -10,9 +10,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/ping", pingRoute);
-app.use("/chuck", chuckRoute);
-app.use("/math", mathRoutes);
+app.use("/", pingRoute);
+app.use("/", chuckRoute);
+app.use("/", mathRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);
